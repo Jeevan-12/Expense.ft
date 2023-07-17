@@ -46,7 +46,10 @@ function ChildDashboard() {
       },
     };
     try {
-      const { data } = await axios('http://localhost:8000/getinfo', obj);
+      const { data } = await axios(
+        'expense-9eu8h8u7p-jeevan-12.vercel.app/getinfo',
+        obj
+      );
       setTotalCredits(data.totalCredits);
     } catch (err) {
       console.log(err);
@@ -56,7 +59,7 @@ function ChildDashboard() {
   const updateAmount = async () => {
     const id = JSON.parse(localStorage.getItem('userInfo'))._id;
     const { data } = await axios.put(
-      `http://localhost:8000/updatecredit/${id}`,
+      `expense-9eu8h8u7p-jeevan-12.vercel.app/updatecredit/${id}`,
       {
         totalCredits: enterValue,
       }
@@ -84,7 +87,10 @@ function ChildDashboard() {
       },
     };
 
-    const { data } = await axios('http://localhost:8000/getinfo', obj);
+    const { data } = await axios(
+      'expense-9eu8h8u7p-jeevan-12.vercel.app/getinfo',
+      obj
+    );
     console.log(data);
     setTotalCredits(data.totalCredits);
   };

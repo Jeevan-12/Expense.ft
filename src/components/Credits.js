@@ -39,7 +39,7 @@ function Credits() {
     };
     try {
       const { data } = await axios(
-        'http://localhost:8000/transaction/addtrans',
+        'expense-9eu8h8u7p-jeevan-12.vercel.app/transaction/addtrans',
         obj
       );
       toast({

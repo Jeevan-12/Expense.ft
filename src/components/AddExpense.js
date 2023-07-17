@@ -37,7 +37,10 @@ function AddExpense() {
     };
 
     try {
-      const { data } = await axios('http://localhost:8000/addexpense', obj);
+      const { data } = await axios(
+        'expense-9eu8h8u7p-jeevan-12.vercel.app/addexpense',
+        obj
+      );
 
       toast({
         title: 'Expense added to list',

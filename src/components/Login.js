@@ -50,7 +50,10 @@ function Login() {
         data: { email, password },
       };
 
-      const { data } = await axios('http://localhost:8000', obj);
+      const { data } = await axios(
+        'expense-9eu8h8u7p-jeevan-12.vercel.app',
+        obj
+      );
       setLoading(false);
       toast({
         title: 'Login succesfull',

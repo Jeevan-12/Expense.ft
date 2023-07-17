@@ -64,7 +64,10 @@ function Signin() {
         data: { name, email, password },
       };
 
-      const { data } = await axios('http://localhost:8000/register', obj);
+      const { data } = await axios(
+        'expense-9eu8h8u7p-jeevan-12.vercel.app/register',
+        obj
+      );
       toast({
         title: 'Registration sucessfull',
         status: 'success',
