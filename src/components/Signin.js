@@ -65,7 +65,7 @@ function Signin() {
       };
 
       const { data } = await axios(
-        'expense-9eu8h8u7p-jeevan-12.vercel.app/register',
+        'https://vercel.com/jeevan-12/expense-bt/register',
         obj
       );
       toast({

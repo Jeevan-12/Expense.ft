@@ -34,7 +34,7 @@ function ExpenseList() {
   const getData = async () => {
     const Id = JSON.parse(localStorage.getItem('userInfo'))._id;
     const { data } = await axios(
-      'expense-9eu8h8u7p-jeevan-12.vercel.app/addexpense/list'
+      'https://vercel.com/jeevan-12/expense-bt/addexpense/list'
     );
     const myList = data.filter((item) => {
       return item.custerId === Id;
@@ -51,7 +51,7 @@ function ExpenseList() {
 
   const dleteHandeler = async (id) => {
     const { data } = await axios.delete(
-      `expense-9eu8h8u7p-jeevan-12.vercel.app/addexpense/${id}`
+      `https://vercel.com/jeevan-12/expense-bt/addexpense/${id}`
     );
     toast({
       title: data,

@@ -32,7 +32,7 @@ function Transfers() {
   const fetchTrans = async () => {
     const Id = JSON.parse(localStorage.getItem('userInfo'))._id;
     const { data } = await axios(
-      'expense-9eu8h8u7p-jeevan-12.vercel.app/transaction'
+      'https://vercel.com/jeevan-12/expense-bt/transaction'
     );
     const myTrans = data.filter((item) => {
       return item.custId === Id;
@@ -49,7 +49,7 @@ function Transfers() {
 
   const dleteHandeler = async (id) => {
     const { data } = await axios.delete(
-      `expense-9eu8h8u7p-jeevan-12.vercel.app/transaction/${id}`
+      `https://vercel.com/jeevan-12/expense-bt/transaction/${id}`
     );
     toast({
       title: data,
